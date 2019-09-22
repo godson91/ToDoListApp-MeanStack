@@ -1,0 +1,21 @@
+<!-- <hr />
+{{  newname }}
+<input type="text" [(ngModel)]="name" > 
+<!-- this is an event we listening to (click) -->
+<!-- <button (click)="changeTheName()" >Change Name</button> -->
+<!-- <br> --> 
+<form #myForm="ngForm" (submit)="formSubmit()">
+    First Name:<br>
+    <input type="text" ngModel name="firstname" required #fn="ngModel">
+    <br>
+    <p *ngIf="!fn.pristine && !fn.valid">This field is required</p>
+    Last Name: <br>
+    <input type="text" ngModel name="lastname" required #ln="ngModel">
+    <br><br>
+    <button type="submit" [disabled]="!myForm.valid">Submit</button>
+</form>
+
+<!-- <ul>
+    <li *ngFor="let day of days">{{ day }}</li>
+    <p *ngIf="isWeekend">We are closed</p>
+</ul> -->
